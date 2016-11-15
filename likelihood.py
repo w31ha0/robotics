@@ -2,7 +2,7 @@ import math
 
 pt_o = (0,0)
 pt_a = (0,168)
-pt_b = (84,68)
+pt_b = (84,168)
 pt_c = (84,126)
 pt_d = (84,210)
 pt_e = (168,210)
@@ -28,7 +28,7 @@ def calculate_likelihood(x,y,theta,z):
         distanceToWall = getDistanceToWall(wall[0][0],wall[0][1],wall[1][0],wall[1][1],x,y,theta)
         deviation = abs(distanceToWall-z)
         if (deviation < prevDeviation):
-            m = distanceToWall
+            m = abs(distanceToWall)
     print "m is " + str(m)
     print "z is " + str(z)
     likelihood = getLikelihoodProb(z,m)

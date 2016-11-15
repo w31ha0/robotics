@@ -17,6 +17,6 @@ class go(object):
                 motorAngles = interface.getMotorAngles(motors)
                 time.sleep(0.1)
 
-o = go()
-o.run(100)
+#o = go()
+#o.run(130)
 

@@ -32,7 +32,7 @@ def navigateToWayPoint(wx, wy, currentPosition, particles):
     angle = math.atan2(wy - cy, wx - cx) - ctheta #math.atan2 returns in radians
     print "angle to turn is " + str(angle)
     
-    turn(-math.degrees(angle))
+    turn(math.degrees(angle))
     particles = [updateRotation(particles[i],math.degrees(angle))for i in range(numberOfParticles)]
     
     gostraight = go()
