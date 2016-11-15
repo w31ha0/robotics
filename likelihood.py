@@ -29,10 +29,10 @@ def calculate_likelihood(x,y,theta,z):
         deviation = abs(distanceToWall-z)
         if (deviation < prevDeviation):
             m = abs(distanceToWall)
-    print "m is " + str(m)
-    print "z is " + str(z)
+    #print "m is " + str(m)
+    #print "z is " + str(z)
     likelihood = getLikelihoodProb(z,m)
-    print "likehood is " + str(likelihood)
+    #print "likehood is " + str(likelihood)
     return likelihood
     
         
@@ -40,7 +40,7 @@ def getDistanceToWall(Ax,Ay,Bx,By,x,y,theta):
     return ((By-Ay)*(Ax-x)-(Bx-Ax)*(Ay-y))/((By-Ay)*math.cos(math.radians(theta))-(Bx-Ax)*math.sin(math.radians(theta)))
 
 def getLikelihoodProb(z,m):
-    sd = 20.0
+    sd = 2.0
     return math.exp( (-(z-m)*(z-m))/2*sd*sd)
 
 #print "likehood is " + str(calculate_likelihood(84,30,3,30))

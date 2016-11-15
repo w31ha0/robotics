@@ -6,8 +6,10 @@ def getSonar():
     usReadingArr = []
     usReading = interface.getSensorValue(SensorPort)[0]
     for counter in range(0, 10):
-        if (usReading > 45 and usReading < 144):
+        if (usReading > 20 and usReading < 120):
             usReadingArr.append(usReading)
+        if (usReading > 3 and usReading <=20):
+            usReadingArr.append(usReading+1)
     print usReadingArr
     if (len(usReadingArr) == 0):
         return -1

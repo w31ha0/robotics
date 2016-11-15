@@ -31,10 +31,14 @@ initialPosition = (84.0,30.0,0.0,1.0/numberOfParticles)
 
 
 mean_x = 0.0
-sd_x = 0.35728
+#sd_x = 0.35728
+sd_x = 0.075
 mean_y = 0.0
-sd_y = 0.37178
+#sd_y = 0.37178
+sd_y = 0.075
 mean_theta = 0.0
-sd_theta = 1.0
+#sd_theta = 0.3
+sd_theta = 0.01
+
 mean_theta_g = 0.0
-sd_theta_g = 3.0
+sd_theta_g = 1.5
